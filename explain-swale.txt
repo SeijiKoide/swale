@@ -1,0 +1,229 @@
+International Allegro CL Enterprise Edition
+9.0 [64-bit Windows *SMP*] (Jun 19, 2016 16:31)
+Copyright (C) 1985-2012, Franz Inc., Oakland, CA, USA.  All Rights Reserved.
+
+This development copy of Allegro CL is licensed to:
+   [TC20564] Seiji Koide -- for his personal use
+
+CG version 9.0 / IDE version 9.0
+Loaded options from C:\Users\誠二\Documents\allegro-prefs-9-0.cl.
+
+;; Optimization settings: safety 1, space 1, speed 1, debug 2.
+;; For a complete description of all compiler switches given the current optimization settings evaluate (explain-compiler-settings).
+;;---
+;; Current reader case mode: :case-sensitive-lower
+
+[changing package from "common-lisp-user" to "common-graphics-user"]
+cg-user(1): (in-package :cbr)
+#<The cbr package>
+cbr(2): (explain-swale)
+; Fast loading C:\allegro-projects\swale\swale-mem.fasl
+
+
+Micro Explainer
+---------------
+Trying to explain m-swale-story
+which has the anomaly:
+  :instance isa m-event-sequence-conflict
+  :event-sequence: m-racehorse-life
+  :expectation: m-expectation-1
+  :surprising-fact: m-swale-dead-state
+
+
+Micro XP Retriever
+------------------
+Searching for XP's.
+... found m-die-from-illness-xp, m-die-from-old-age-xp.
+Applying m-die-from-illness-xp.
+... generated M-EXPL0.
+Applying m-die-from-old-age-xp.
+... generated M-EXPL1.
+
+
+Micro-Accepter
+--------------
+Evaluating M-EXPL0 for the purpose prediction.
+The underling XP is
+  :mop isa m-xp
+  :events: ((:illness m-bad-health-state) (:outcome m-dead-state))
+  :causals: ((:illness => :outcome))
+  :constraints: (((:events :illness :object) (:events :outcome :object)))
+Checking if explanation accounts for m-swale-dead-state.
+... appears relevant.
+Checking believability.
+Problem found!
+  :instance isa m-non-normative-filler-problem
+  :explanation: M-EXPL0
+  :path: (:events :illness :object)
+  :expected-value: m-unhealthy-animal
+  :observed-value: m-swale
+... explanation is not believable.
+Checking if explanation is useful for the purpose prediction.
+Is the explanation predictive?
+... Explanation is adequate for prediction.
+Checking seriousness of problems.
+... M-EXPL0 is tweakable.
+
+
+Micro Tweaker
+-------------
+Looking for candidate tweaks in memory for M-PROB2.
+... found m-replace-action-use-causals-tweak, m-replace-actor-use-stereotypes-tweak, m-replace-action-use-stereotypes-tweak.
+Trying tweak replace-action-search-through-causal-rules on M-EXPL0.
+... tweak failed.
+Trying tweak replace-actor-search-through-stereotypes on M-EXPL0.
+... tweak failed.
+Trying tweak replace-action-search-through-stereotypes on M-EXPL0.
+Looking for effects to be accounted for.
+... found m-dead-state.
+Looking for scripts for m-swale that include m-dead-state.
+... no scripts found.
+... tweak failed.
+
+
+Micro XP Retriever
+------------------
+Searching for XP's.
+Looking for retrieval cues in M-PROB2.
+... Cue: observed m-swale, rather than m-unhealthy-animal.
+... found m-fixx-xp.
+Applying m-fixx-xp.
+... generated M-EXPL3.
+
+
+Micro-Accepter
+--------------
+Evaluating M-EXPL1 for the purpose prediction.
+The underling XP is
+  :mop isa m-xp
+  :events: ((:old-age m-old-age-state) (:outcome m-dead-state))
+  :causals: ((:old-age => :outcome))
+  :constraints: (((:events :old-age :object) (:events :outcome :object)))
+Checking if explanation accounts for m-swale-dead-state.
+... appears relevant.
+Checking believability.
+Problem found!
+  :instance isa m-non-normative-filler-problem
+  :explanation: M-EXPL1
+  :path: (:events :old-age :object)
+  :expected-value: m-old-animal
+  :observed-value: m-swale
+... explanation is not believable.
+Checking if explanation is useful for the purpose prediction.
+Is the explanation predictive?
+... Explanation is adequate for prediction.
+Checking seriousness of problems.
+... M-EXPL1 is tweakable.
+
+
+Micro Tweaker
+-------------
+Looking for candidate tweaks in memory for M-PROB4.
+... found m-replace-action-use-causals-tweak, m-replace-actor-use-stereotypes-tweak, m-replace-action-use-stereotypes-tweak.
+Trying tweak replace-action-search-through-causal-rules on M-EXPL1.
+... tweak failed.
+Trying tweak replace-actor-search-through-stereotypes on M-EXPL1.
+... tweak failed.
+Trying tweak replace-action-search-through-stereotypes on M-EXPL1.
+Looking for effects to be accounted for.
+... found m-dead-state.
+Looking for scripts for m-swale that include m-dead-state.
+... no scripts found.
+... tweak failed.
+
+
+Micro XP Retriever
+------------------
+Searching for XP's.
+Looking for retrieval cues in M-PROB4.
+... Cue: observed m-swale, rather than m-old-animal.
+... no XP's found.
+
+
+Micro-Accepter
+--------------
+Evaluating M-EXPL3 for the purpose prediction.
+The underling XP is
+  :mop isa m-xp
+  :observed: m-healthy-animal
+  :expected: m-unhealthy-animal
+  :events: ((:jog m-jog-event) (:run m-run-event) (:exert m-exert-event) (:defect m-heart-defect-state) (:outcome m-dead-state))
+  :causals: ((:jog => :run) (:run => :exert) (:defect :exert => :outcome))
+  :constraints: (((:events :jog :actor) (:events :run :actor) (:events :exert :actor) (:events :defect :owner) (:events :outcome :object)))
+Checking if explanation accounts for m-swale-dead-state.
+... appears relevant.
+Checking believability.
+Problem found!
+  :instance isa m-non-normative-filler-problem
+  :explanation: M-EXPL3
+  :path: (:events :jog :actor)
+  :expected-value: m-human
+  :observed-value: m-swale
+... explanation is not believable.
+Checking if explanation is useful for the purpose prediction.
+Is the explanation predictive?
+Problem found!
+  :instance isa m-non-knowable-antecedent-problem
+  :explanation: M-EXPL3
+  :fact: m-heart-defect-state
+  :event-label: :defect
+... Explanation is not adequate for prediction.
+Checking seriousness of problems.
+... M-EXPL3 is tweakable.
+
+
+Micro Tweaker
+-------------
+Looking for candidate tweaks in memory for M-PROB5.
+... found m-replace-action-use-causals-tweak, m-replace-actor-use-stereotypes-tweak, m-replace-action-use-stereotypes-tweak.
+Trying tweak replace-action-search-through-causal-rules on M-EXPL3.
+... tweak failed.
+Trying tweak replace-actor-search-through-stereotypes on M-EXPL3.
+... tweak failed.
+Trying tweak replace-action-search-through-stereotypes on M-EXPL3.
+Looking for effects to be accounted for.
+... found m-run-event.
+Looking for scripts for m-swale that include m-run-event.
+... found m-horserace-event.
+Creating a new xp M-XP7 with m-horserace-event instead of m-jog-event
+Applying M-XP7.
+... generated M-EXPL8.
+... tweak generated M-EXPL8.
+Looking for candidate tweaks in memory for M-PROB6.
+... no tweaks found.
+
+
+Micro XP Retriever
+------------------
+Searching for XP's.
+Looking for retrieval cues in M-PROB5.
+... Cue: observed m-swale, rather than m-human.
+Looking for retrieval cues in M-PROB6.
+... no XP's found.
+
+
+Micro-Accepter
+--------------
+Evaluating M-EXPL8 for the purpose prediction.
+The underling XP is
+  :mop isa m-xp
+  :events: ((:jog m-horserace-event) (:run m-run-event) (:exert m-exert-event) (:defect m-heart-defect-state) (:outcome m-dead-state))
+  :causals: ((:jog => :run) (:run => :exert) (:defect :exert => :outcome))
+  :observed: m-healthy-animal
+  :expected: m-unhealthy-animal
+Checking if explanation accounts for m-swale-dead-state.
+... appears relevant.
+Checking believability.
+... no problems.
+Checking if explanation is useful for the purpose prediction.
+Is the explanation predictive?
+Problem found!
+  :instance isa m-non-knowable-antecedent-problem
+  :explanation: M-EXPL8
+  :fact: m-heart-defect-state
+  :event-label: :defect
+... Explanation is not adequate for prediction.
+Checking seriousness of problems.
+... M-EXPL8 is acceptable.
+M-EXPL8
+cbr(3): 
