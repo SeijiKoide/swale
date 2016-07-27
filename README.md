@@ -1,7 +1,7 @@
 # swale
 Original code by Reasbeck, et al. in "INSIDE CASE-BASED EXPLANATION"
 
-## Loding with Quicklisp
+## Loading with Quicklisp
 
 ```
 $ cd ~/quicklisp/local-projects
