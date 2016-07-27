@@ -1,4 +1,4 @@
-(defpackage :cbr)
+(defpackage :cbr (:use :cl))
 (in-package :cbr)
 
 ;;; ------------------------------------------------------------

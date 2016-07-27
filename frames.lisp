@@ -1,4 +1,4 @@
-(defpackage :cbr)
+(defpackage :cbr (:use :cl))
 (in-package :cbr)
 
 ;;; ----------------------------------------------------------
@@ -35,13 +35,13 @@
   "ADD-FRAME &key <name> <absts> <slots> <props>
    adds a new frame to memory with the given <name>, <absts>, <slots>, 
    and <props>. If a frame of that name already exists, it is redefined.
-   ¥ <name> can be any symbol
-   ¥ <absts> should be either the name of a frame or a (possibly empty) 
+   ï½¥ <name> can be any symbol
+   ï½¥ <absts> should be either the name of a frame or a (possibly empty) 
      list of frame names
-   ¥ <slots> should be a list of the form (role filler role filler ...)
+   ï½¥ <slots> should be a list of the form (role filler role filler ...)
      A role should be a symbol or a number, a filler can be anything. 
      By convention, we presume all names of symbol role with a colon(:).
-   ¥ <props> should be a list of the form (key value key value ...)."
+   ï½¥ <props> should be a list of the form (key value key value ...)."
   (setf (gethash name *frames*)
     (make-frame :name name
                 :absts (collect-absts absts)
